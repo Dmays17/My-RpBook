@@ -1,8 +1,7 @@
-import './App.css';
 
 function MyBook(){
 return(
-    <div>
+    <div className="mybook">
         <h1>MyBook</h1>
     </div>
 )
