@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
-
+import Recipe from "./Recipe"
 
 function WorldBook() {
 
     const APP_ID = "994c38dc";
     const APP_KEY = "7e112fd69a42767ad086abc60eff87b7"	
     
+    const [allRecipes, setRecipes] = useState([])
 
     useEffect(() => {
         recipes();
@@ -14,7 +15,7 @@ function WorldBook() {
     const recipes = async () => {
         const response = await fetch (`https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`)
         const data =  await response.json();
-        console.log(data)
+        setRecipes(data.hits)
 
     }
 
@@ -26,6 +27,9 @@ function WorldBook() {
                     search
                 </button>
             </form>
+            {allRecipes.map(recipe => (
+                <Recipe title={recipe.recipe.label} calories = {recipe.recipe.calories} image = {recipe.recipe.image} />
+            ))}
         </div>
     )
 }
