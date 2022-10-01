@@ -1,10 +1,11 @@
 
-function App() {
-  
+import './App.css';
+import WorldBook from './component/WorldBook'
 
+function App() {
   return (
-    <div className="App">
-      
+    <div>
+      <WorldBook />
     </div>
   );
 }
