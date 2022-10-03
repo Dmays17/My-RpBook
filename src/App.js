@@ -1,6 +1,8 @@
 import {BrowserRouter as Router,Link,Routes,Route}from 'react-router-dom'
 import './App.css';
 import MyBook from './component/MyBook';
+import WorldBook from './component/WorldBook';
+import MyBookForm from './component/MyBookForm';
 function App() {
   return (
     <div className="NavBar">
@@ -12,7 +14,9 @@ function App() {
                 <li>
                    <Link to="/" >Home</Link> 
                 </li>
-                
+                <li>
+                   <Link to="/WorldBook" >WorldBook</Link> 
+                </li>
             </ul>
             
         </div>
@@ -21,8 +25,8 @@ function App() {
       <div>
         <Routes>
           <Route path="/"element={<MyBook/>}/>
-          {/* <Route path="/mybook"element={<mybook/>}/> */}
-          
+          <Route path="/WorldBook"element={<WorldBook/>}/> 
+          <Route path="/MyBookForm" element={<MyBookForm/>}/>
         </Routes>
       </div>
         </Router>

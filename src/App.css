@@ -4,6 +4,7 @@
 
 .mybook{
   text-align: center;
+  color:white
 }
 
 .NavBar ul {
@@ -19,17 +20,16 @@
   list-style: none;
 }
 
-.NavBar a:link{
-  text-decoration: none;
+.NavBar a{
   color:black
 }
 
+.NavBar a:link{
+  text-decoration: none;
+  
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.body{
+  background-color: black;
+  
 }
