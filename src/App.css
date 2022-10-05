@@ -16,9 +16,7 @@
     flex-direction: column;
     align-items: center;
   }
-  
-  
-  
+    
   .recipes {
     width: 90%;
     display: flex;
@@ -85,3 +83,38 @@
     color: #888;
   }
   
+.App {
+  text-align: center;
+}
+
+.mybook{
+  text-align: center;
+  color:white
+}
+
+.NavBar ul {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.NavBar li {
+  display: inline;
+  padding: 1em; 
+  list-style: none;
+}
+
+.NavBar a{
+  color:black
+}
+
+.NavBar a:link{
+  text-decoration: none;
+  
+}
+
+.body{
+  background-color: black;
+  
+}

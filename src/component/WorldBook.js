@@ -30,7 +30,7 @@ function WorldBook() {
     }
 
     return(
-        <div clasName = "App">
+        <div className = "App">
             <form className = "search" onSubmit={submitForm}>
                 <input className = "search-bar" type = "text" placeholder="enter food recipe" value={query} onChange={e => setQuery(e.target.value)} />
                 <button className = "search-button" type = "submit">

@@ -1,7 +1,8 @@
+
 import {useNavigate} from 'react-router-dom'
 import RecipeDetails from "./RecipeDetails"
 import {useState} from 'react'
-import Card from 'react-bootstrap/Card'
+//import Card from 'react-bootstrap/Card'
 
 const Recipe = ({title, image, url, ingredients, favorite}) => {
     let navigate = useNavigate()
