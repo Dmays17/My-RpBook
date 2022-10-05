@@ -4,16 +4,16 @@ import MyBook from './component/MyBook';
 import WorldBook from './component/WorldBook';
 import MyBookForm from './component/MyBookForm';
 import LoginForm from './component/LoginForm';
-
+import Recipe from './component/Recipe';
 function App() {
- 
+  
   return (
     <div className="NavBar">
       <Router>
       <header>
       
       <div>
-      <img src={'logo'} alt='logo'/>
+      <img src="src\Logo.jpeg" alt='logo' />
             <ul>
             
               
@@ -34,6 +34,7 @@ function App() {
           <Route path="/MyBook"element={<MyBook/>}/>
           <Route path="/WorldBook"element={<WorldBook/>}/> 
           <Route path="/MyBookForm" element={<MyBookForm/>}/>
+          <Route path="/WorldBook/Recipe" element={<Recipe/>}/>
         </Routes>
       </div>
         </Router>

@@ -5,9 +5,9 @@ function LoginForm(){
 
     return(
        <div>
-        <h1>sfsf</h1>
+        
         <form>
-
+        
         <div className='form-inner'>
             <h2>Login</h2>
             </div>
