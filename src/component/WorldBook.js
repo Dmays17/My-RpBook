@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import Recipe from "./Recipe"
-import RecipeDetails from "./RecipeDetails"
+import AddFavorites from "./AddFavorites"
+
 
 
 function WorldBook() {
@@ -19,7 +20,7 @@ function WorldBook() {
         const response = await fetch (`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`)
         const data =  await response.json();
         setRecipes(data.hits)
-        console.log(response.data)
+        console.log(data)
 
     }
 
@@ -29,16 +30,18 @@ function WorldBook() {
     }
 
     return(
-        <div>
+        <div clasName = "App">
             <form className = "search" onSubmit={submitForm}>
                 <input className = "search-bar" type = "text" placeholder="enter food recipe" value={query} onChange={e => setQuery(e.target.value)} />
                 <button className = "search-button" type = "submit">
                     Search
                 </button>
             </form>
+            <div className="recipes">
             {allRecipes.map(recipe => (
-                <Recipe key = {recipe.recipe.label} title={recipe.recipe.label} calories = {recipe.recipe.calories} image = {recipe.recipe.image} ingredients={recipe.recipe.ingredients} />
+                <Recipe key = {recipe.recipe.label} url = {recipe.recipe.url} title={recipe.recipe.label} calories = {recipe.recipe.calories} image = {recipe.recipe.image} ingredients={recipe.recipe.ingredients} favorite = {AddFavorites} />
             ))}
+            </div>
         </div>
     )
 }

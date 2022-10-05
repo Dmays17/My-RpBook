@@ -1,0 +1,87 @@
+* {
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+  }
+  
+  html {
+    font-size: 57%;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  
+  .recipes {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .details {
+    width: 30rem;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #d3d3d3;
+    padding: 2rem;
+    position: relative;
+    border-radius: 0.5rem;
+    box-shadow: 2rem 3rem 5rem #aaa;
+  }
+  
+  .details h1 {
+    background-color: hsla(0, 9%, 19%, 0.7);
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.5rem;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .details img {
+    border-radius: 0.5rem;
+    object-fit: contain;
+  }
+   
+  .details button {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: black;
+    border: none;
+    border-radius: 0.5rem;
+    height: 3rem;
+  }
+  
+  .ingredient-list {
+    margin-top: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .ingredient-list li {
+    margin: 0.5rem 0;
+  }
+  
+  .ingredient-text {
+    font-size: 1.5rem;
+    color: #888;
+  }
+  
