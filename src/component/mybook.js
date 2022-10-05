@@ -2,6 +2,7 @@ import axios from "axios"
 import {useState} from "react"
 import {useNavigate}from "react-router-dom"
 import React from "react"
+
 function MyBook(){
 
 const navigate=useNavigate()
@@ -16,12 +17,17 @@ const handleClick = (e) => {
 }
 
 return(
+
     <div className="MyBook">
+        
         <h1>MyBook</h1>
         <button onClick={handleClick} variant="primary" type="submit">
             Add My Recipe
             </button>
+            
     </div>
+    
+    
 )
 }
 export default MyBook;

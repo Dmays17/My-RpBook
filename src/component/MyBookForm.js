@@ -15,7 +15,7 @@ function MyBookForm(){
         setForm((prev)=>{
           return({
             ...prev,
-            [name]:value,
+            [name]:value
           })
         })
          
