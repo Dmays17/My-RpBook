@@ -25,6 +25,22 @@ function WorldBook() {
        e.preventDefault();
        recipes(); 
     }
+function updateRecipes() {
+    const addToMyBook = document.getElementsByClassName('add-recipe')
+        for (var i =0; i < addToMyBook.length; i++) {
+            const button = addToMyBook[i]
+            button.addEventListener('click', addToRecipeClicked)
+        }
+    }
+function addToRecipeClicked(event) {
+    const button = event.target
+    const recipeItem = button.parentElement.parentElement
+    const recipeName = recipeItem.getElementsByClassName('recipe-calorie')[0]
+    console.log(recipeName)
+
+
+}
+
 
     return(
         <div>

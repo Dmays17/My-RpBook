@@ -1,6 +1,7 @@
+import './component.css';
 const Recipe = ({title, calories, image}) => {
     return(
-        <div style={{
+        <div className="recipe-display" style={{
             'display': 'inline-block',
             'width': '35vw',
             'height': '35vh',
@@ -8,9 +9,12 @@ const Recipe = ({title, calories, image}) => {
             'margin' : '3px',
             'position': 'relative'
         }}>
-            <h1>{title}</h1>
-            <p>Number of calories: {calories}</p>
-            <img src = {image} alt = "" width="250" height="200" />
+            <div className="recipe-title"><h1>{title}</h1></div>
+            <div className="recipe-calorie"><p>Number of calories: {calories}</p></div>
+            <div className="recipe-img"><img src = {image} alt = "" width="250" height="200" />
+            <button type="button" class="btn btn-primary add-recipe">Add to MyBook</button>
+            </div>
+            
         </div>
     )
 }
