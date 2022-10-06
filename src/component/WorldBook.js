@@ -30,6 +30,8 @@ function WorldBook() {
     }
 
     return(
+        <div className="searchBar">
+        <h2 className="searchTitle">Please enter a recipe below!</h2>
         <div className = "App">
             <form className = "search" onSubmit={submitForm}>
                 <input className = "search-bar" type = "text" placeholder="enter food recipe" value={query} onChange={e => setQuery(e.target.value)} />
@@ -42,6 +44,7 @@ function WorldBook() {
                 <Recipe key = {recipe.recipe.label} url = {recipe.recipe.url} title={recipe.recipe.label} calories = {recipe.recipe.calories} image = {recipe.recipe.image} ingredients={recipe.recipe.ingredients} favorite = {AddFavorites} />
             ))}
             </div>
+        </div>
         </div>
     )
 }

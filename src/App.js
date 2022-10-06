@@ -42,9 +42,12 @@ function App() {
     <div className="NavBar">
       <Router>
       <header>
-      
+      <div className="headerandimg">
+      <img src={require("./Logo.jpeg")} alt='logo' /><h1>Welcome to MyRPBook!</h1>
+       
+      </div> 
       <div>
-      <img src="src\Logo.jpeg" alt='logo' />
+
             <ul>
             
               

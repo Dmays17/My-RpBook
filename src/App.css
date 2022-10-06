@@ -16,7 +16,10 @@
     flex-direction: column;
     align-items: center;
   }
-    
+
+  
+  
+  /*This is styling for the worldbook page*/  
   .recipes {
     width: 90%;
     display: flex;
@@ -76,37 +79,79 @@
   
   .ingredient-list li {
     margin: 0.5rem 0;
+    
   }
   
   .ingredient-text {
     font-size: 1.5rem;
     color: #888;
+    
   }
   
+  .searchBar h2 {
+    text-align: center;
+    padding-top: 1em;
+    color: white;
+    font-size: 3.5em;
+  }
+  .searchBar {
+    height: 100em;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/006/823/934/original/set-icons-with-foods-doodle-with-foods-icons-on-black-background-vintage-food-set-icons-sweet-elements-background-for-your-project-menu-cafe-shop-free-vector.jpg")
+  }
+
 .App {
+  padding-top: 1em;
   text-align: center;
+  font-size: 2em;
 }
 
+/*MyBook styling*/
 .mybook{
   text-align: center;
   color:white
 }
-
+/*Navbar styling*/
 .NavBar ul {
   list-style-type: none;
   text-align: center;
   margin: 0;
   padding: 0;
+
 }
 
 .NavBar li {
+  font-size:large;
   display: inline;
-  padding: 1em; 
+  padding: 25px; 
   list-style: none;
 }
 
+
+
+
+.headerandimg h1 {
+  text-align: center;
+  display:inline-table;
+  margin-left: 11em;
+  padding-top: 1em;
+  font-size: 45px;
+  color: black;
+}
+
+.headerandimg img {
+  width: 220px;
+  height: 100px;
+  background: #555;
+  
+}
+
+
+header {
+background-color: white;
+}
+
 .NavBar a{
-  color:black
+  color:black;
 }
 
 .NavBar a:link{
