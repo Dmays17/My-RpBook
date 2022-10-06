@@ -1,22 +1,44 @@
 import {BrowserRouter as Router,Link,Routes,Route}from 'react-router-dom'
 import './App.css';
-import WorldBook from './component/WorldBook'
-import {Routes,Route} from 'react-router-dom'
 import RecipeDetails from './component/RecipeDetails'
-
 import MyBook from './component/MyBook';
 import WorldBook from './component/WorldBook';
 import MyBookForm from './component/MyBookForm';
 import LoginForm from './component/LoginForm';
 import Recipe from './component/Recipe';
+import React, { useState } from 'react';
 function App() {
+    const adminUser = {
+      name: "",
+      username: "admin",
+      password: "admin123"
+    }
+  
+    const [user, setUser] = useState({name: "", username: ""});
+    const [error, setError] = useState("");
+  
+    const Login = details => {
+      console.log(details);
+  
+      if (details.username == adminUser.username && details.password == adminUser.password){
+      console.log("Logged in");
+      setUser({
+        name: details.name,
+        username: details.username
+      });
+    } else {
+      console.log("Details do not match");
+      setError("Details do not match")
+    }
+  }  
+  
+    const Logout = () => {
+      setUser({ name:"", username: ""})
+    }
+  
   
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<WorldBook />}/>
-        <Route path="/:title" element={<RecipeDetails/>}/>
-      </Routes>
     <div className="NavBar">
       <Router>
       <header>
@@ -39,16 +61,19 @@ function App() {
 
       <div>
         <Routes>
-          <Route path='/'element={<LoginForm/>}/>
+          
           <Route path="/MyBook"element={<MyBook/>}/>
           <Route path="/WorldBook"element={<WorldBook/>}/> 
           <Route path="/MyBookForm" element={<MyBookForm/>}/>
           <Route path="/WorldBook/Recipe" element={<Recipe/>}/>
         </Routes>
       </div>
-        </Router>
+       </Router> 
     </div>
-  );
-}
+    
+    </div>
+    );
+  }
+
 
 export default App;
