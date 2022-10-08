@@ -3,7 +3,7 @@ import {useNavigate}from "react-router-dom"
 import axios from "axios"
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import Form from 'react-bootstrap/Form';
+
 
 function MyBook(){
 //For my bookForm 
@@ -67,6 +67,13 @@ const handleChange=(e)=>{
 }
 
 const saveUpdateForm=()=>{
+    axios
+        .put(`http://localhost:5000/api/update/${updateForm._id}`,updateForm)
+        .then(res => console.log(res))
+        .catch((err)=> console.log(err))
+
+    handleClose()
+    window.location.reload()
    console.log(updateForm);
 }
 
@@ -125,7 +132,7 @@ return(
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={saveUpdateForm()}>
+          <Button variant="primary" onClick={saveUpdateForm}>
             Save Changes
           </Button>
         </Modal.Footer>
