@@ -46,16 +46,20 @@ function App() {
       <img src={require("./Logo.jpeg")} alt='logo' /><h1>Welcome to MyRPBook!</h1>
        
       </div> 
-      <div>
+      <div className='nav-links'>
 
             <ul>
             
               
-                <li>
-                   <Link to="/MyBook" >MyBook</Link> 
+                <li className='link1'>
+                  
+                   <Link to="/MyBook" >MyBook</Link>
+                    
                 </li>
-                <li>
-                   <Link to="/WorldBook" >WorldBook</Link> 
+                <li className='link2'>
+                  
+                   <Link to="/WorldBook" >WorldBook</Link>
+                   
                 </li>
             </ul>
             

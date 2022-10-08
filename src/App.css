@@ -90,13 +90,19 @@
   
   .searchBar h2 {
     text-align: center;
-    padding-top: 1em;
+    padding-top: .5em;
     color: white;
     font-size: 3.5em;
   }
   .searchBar {
     height: 100em;
     background-image: url("https://static.vecteezy.com/system/resources/previews/006/823/934/original/set-icons-with-foods-doodle-with-foods-icons-on-black-background-vintage-food-set-icons-sweet-elements-background-for-your-project-menu-cafe-shop-free-vector.jpg")
+  }
+  .search-bar{
+    font-size: 1.2em;
+  }
+  .search-button{
+    font-size: 1.2em;
   }
 
 .App {
@@ -126,9 +132,6 @@
   list-style: none;
 }
 
-
-
-
 .headerandimg h1 {
   text-align: center;
   display:inline-table;
@@ -136,6 +139,7 @@
   padding-top: 1em;
   font-size: 45px;
   color: black;
+  border-bottom: solid black .5em;
 }
 
 .headerandimg img {
@@ -144,6 +148,19 @@
   background: #555;
   
 }
+
+.nav-links{
+  border-bottom: solid black .3em;
+}
+
+.link1:hover{
+background-color: rgb(153, 153, 153) ;
+size: .5em;
+}
+.link2:hover{
+  background-color: rgb(153, 153, 153) ;
+  size: .5em;
+  }
 
 
 header {
