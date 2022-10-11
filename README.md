@@ -19,7 +19,7 @@ We always value feedback so if there are any feature you would like to see added
 
 List of technologies used: VSCode, React, BootStrap, CSS, Express, Mongo, Cors, Morgan, Netlifly(front-End), Heroku(Back-End)
 
-Outstanding Bugs: Page Crashes when deployed when clicking Update and Delete buttons, but then shows after refresh.
+Outstanding Bugs: Page Crashes after being deployed when clicking Update and Delete buttons, but then shows after refresh to home page.
 
 Unfinished Functionality: Favorites Butoon for WorldBook Recipes, Login Fomr and Home Page
 
