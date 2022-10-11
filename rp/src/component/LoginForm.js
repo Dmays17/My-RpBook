@@ -1,13 +1,24 @@
 import React, {useState} from 'react';
+import {useNavigate}from "react-router-dom"
 
 function LoginForm({ Login, error }) {
   const [details, setDetails] = useState({name: "", username: "", password: ""});
-
+  const[goToHome,setGoToHome]= useState(false)
+  const navigate=useNavigate()
     const submitHandler = e => {
       e.preventDefault();
 
       Login(details);
     }
+
+    if(goToHome){
+      navigate("/MyBook")
+      
+    }
+      const handleClick = (e) => {
+      e.preventDefault()  
+      setGoToHome(true)
+  }
 
   return (
     <form onSubmit={submitHandler}>
@@ -26,7 +37,7 @@ function LoginForm({ Login, error }) {
                 <label htmlFor='password'>Password</label>
                 <input type='password' name='password' id='password' onChange={e => setDetails({...details, password: e.target.value})} value={details.password} />
               </div>
-                <input type="submit" value="Login" />
+                <input onClick={handleClick} type="submit" value="Login" />
         </div>
     </form>
   )

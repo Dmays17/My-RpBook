@@ -1,6 +1,6 @@
 const express=require('express')
 const router=express.Router()
-const RecipePost=require('../../../Trying/models/RecipePost.js')
+const RecipePost=require('../models/RecipePost')
 
 router.get('/',(req,res)=>{
 
@@ -41,7 +41,7 @@ router.post('/',(req,res)=>{
  router.put("/update/:id",(req,res)=>{
     console.log(req.params)
     console.log(req.body)
-    RecipePost.findByIdAndUpdate({_id: req.param.id},{
+    RecipePost.findByIdAndUpdate({_id: req.params.id},{
         name: req.body.name,
         ingredents:req.body.ingredents,
         prep:req.body.prep,
