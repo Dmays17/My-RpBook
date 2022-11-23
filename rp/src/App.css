@@ -17,6 +17,20 @@
     align-items: center;
   }
 
+  .title h1{
+    text-align: center;
+    text-decoration:underline;
+    font-size: 45px;
+    color: black;
+    
+  }
+  .titleworld h1{
+    text-align: center;
+    font-size: 45px;
+    color: white;
+    background-color: black;
+    
+  }
   
   
   /*This is styling for the worldbook page*/  

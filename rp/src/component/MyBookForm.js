@@ -29,7 +29,7 @@ function MyBookForm(){
       }
 
       if(goToBook){
-        navigate("/MyBook")
+        navigate("/")
       }
       const handleClick = (e) => {
         e.preventDefault() 
